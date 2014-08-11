@@ -1,0 +1,45 @@
+<ion-view title="Mina Västtrafik-kort">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear" ng-click="logOut()">
+      <i class="button-icon icon ion-log-out"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-refresher
+      pulling-text="Dra och släpp..."
+      refreshing-text="Laddar..."
+      refreshing-icon="ion-ios7-reloading"
+      on-refresh="doRefresh()"
+      >
+    </ion-refresher>
+    <ion-list>
+      <div class="card" ng-if="error">
+        <div class="item error item-text-wrap">
+          {{error}}
+        </div>
+      </div>
+      <div class="item item-icon-left item-divider"
+          ng-repeat-start="card in cards">
+          <i class="icon vt-card"></i> {{ card.Name }}
+          <span class="item-note">{{ card.Number | formatCardNumber }}</span>
+      </div>
+
+      <div class="item item-icon-right"
+           ng-repeat="charge in card.Charges">
+          <i class="icon ion-checkmark" ng-if="(charge.Type == 0 && charge.Amount > 0) || (charge.Type == 1 && (charge.ExpiryTime | dateHasPassed))"></i>
+          <i class="icon ion-close" ng-if="(charge.Type == 0 && charge.Amount <= 0) ||  (charge.Type == 1 && !(charge.ExpiryTime | dateHasPassed))"></i>
+
+          <h2>{{ charge.Name }}</h2>
+          <p ng-if="charge.Type == 1">
+            Giltigt t.o.m. {{ charge.ExpiryTime | vtDate }}
+          </p>
+          <p ng-if="charge.Type == 0">
+            Saldo: {{ charge.Amount | vtAmount }}
+          </p>
+      </div>
+
+      <div ng-repeat-end></div>
+      <p class="bottom-text" ng-if="lastUpdated">Uppdaterades {{ lastUpdatedFormatted }}</p>
+    </ion-list>
+  </ion-content>
+</ion-view>

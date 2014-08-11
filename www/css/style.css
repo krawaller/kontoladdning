@@ -1,0 +1,48 @@
+/* Empty. Add your own CSS if you like */
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  width: 106px;
+  height: 67px; }
+
+.item-input {
+  border-width: 0 0 1px 0;
+  margin-bottom: 13px;
+  border-color: #d6d6d6;
+  padding-bottom: 0px; }
+  .item-input .icon {
+    margin-right: 10px;
+    margin-bottom: 2px;
+    font-size: 19px; }
+  .item-input input {
+    font-size: 16px; }
+
+.bottom-text {
+  text-align: center;
+  margin: 10px 0 10px;
+  color: #BBB; }
+  .bottom-text span {
+    color: #4a87ee;
+    text-decoration: none; }
+
+.error {
+  color: red; }
+
+#signin-button {
+  margin-top: 23px; }
+
+.vt-card {
+  width: 32px;
+  background: url(../img/icon-card-transparent.png) center center no-repeat;
+  background-size: 32px 20px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .vt-card {
+    background-image: url(../img/icon-card-transparent@2x.png);
+  }
+}

@@ -1,0 +1,31 @@
+<ion-view title="Kontoladdning">
+  <ion-nav-buttons side="right">
+    <a class="button button-clear" href="#/info">
+      <i class="button-icon icon ion-ios7-information"></i>
+    </a>
+  </ion-nav-buttons>
+  <ion-content class="padding" scroll="false">
+    <img class="logo" src="img/header-logo@2x.png">
+    <div class="card" ng-if="form.error">
+      <div class="item error item-text-wrap">
+        {{form.error}}
+      </div>
+    </div>
+    <form ng-submit="logIn()">
+      <div class="ion-list">
+        <label class="item item-input">
+          <i class="icon ion-person placeholder-icon"></i>
+          <input ng-model="form.username" type="text" placeholder="Användarnamn hos Västtrafik" autocorrect="off" autocapitalize="off">
+        </label>
+        <label class="item item-input">
+          <i class="icon ion-locked placeholder-icon"></i>
+          <input ng-model="form.password" type="password" placeholder="Lösenord hos Västtrafik">
+        </label>
+        <input id="signin-button" type="submit" ng-disabled="!(form.password && form.username)" class="button button-block button-positive" value="Logga In">
+      </div>
+    </form>
+    <p id="home-bottom-text" class="bottom-text">
+      Har du inget konto? <a href="https://www.vasttrafik.se/#!/mina-sidor/registrera-ny-anvandare/" target="_blank" ng-click="openRegisterLink($event)">Gå till Västtrafik.se <i class="icon ion-arrow-right-c"></i></a>
+    </p>
+  </ion-content>
+</ion-view>
