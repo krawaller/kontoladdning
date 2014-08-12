@@ -17,11 +17,24 @@
   width: $menu-width;
 
   background-color: $menu-bg;
+
+  .scroll-content {
+    z-index: $z-index-menu-scroll-content;
+  }
+
+  .bar-header {
+    z-index: $z-index-menu-bar-header;
+  }
 }
 
 .menu-content {
   @include transform(none);
   box-shadow: $menu-side-shadow;
+}
+
+.menu-open .menu-content .pane,
+.menu-open .menu-content .scroll-content {
+  pointer-events: none;
 }
 
 .grade-b .menu-content,
