@@ -32,4 +32,3 @@ angular.module('kontoladdning', ['ionic', 'kontoladdning.controllers', 'kontolad
   $urlRouterProvider.otherwise('/login');
 
 });
-

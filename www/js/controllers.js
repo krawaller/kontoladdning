@@ -33,10 +33,6 @@ angular.module('kontoladdning.controllers', [])
     return 'woot'
   };
 
-  $scope.openRegisterLink = function(e) {
-    window.open(e.target.href, '_blank', 'closebuttoncaption=Klar', 'toolbar=no', 'location=no');
-    e.preventDefault();
-  }
 })
 
 .controller('CardsCtrl', function($scope, $state, $interval, $filter, $ionicLoading, CardsService, AuthService) {
