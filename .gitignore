@@ -42,6 +42,7 @@ profile
 IOS/www/
 
 platforms/ios/www
+platforms/ios/cordova/console.log
 
 # OSX
 .DS_Store
