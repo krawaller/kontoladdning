@@ -4,9 +4,17 @@
   "description": "This app lets you easily see the charges on your Västtrafik card(s)",
   "dependencies": {
     "gulp": "^3.5.6",
-    "gulp-sass": "^0.7.1",
     "gulp-concat": "^2.2.0",
     "gulp-minify-css": "^0.3.0",
-    "gulp-rename": "^1.2.0"
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.1",
+    "browserify": "^5.10.0",
+    "kew": "^0.4.0",
+    "ua-parser-js": "^0.7.0",
+    "vasttrafik-cards": "^0.1.0",
+    "vasttrafik-login": "0.0.2"
+  },
+  "scripts": {
+    "bundle-external": "./node_modules/.bin/browserify -r vasttrafik-login -r vasttrafik-cards -r kew > www/js/bundle.js"
   }
 }
