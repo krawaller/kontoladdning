@@ -25,6 +25,5 @@
       event.preventDefault();
       shouldPreventClick = false;
     }
-    console.log('click')
   }, document.body);
 })();
