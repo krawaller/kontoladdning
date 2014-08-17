@@ -1,5 +1,3 @@
-// TODO: fix refresh when app reactivated and info stale
-
 angular.module('kontoladdning.controllers', [])
 
 .controller('LoginCtrl', function($scope, $state, $location, $ionicLoading, AuthService) {
