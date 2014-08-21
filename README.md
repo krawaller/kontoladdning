@@ -1,3 +1,5 @@
+<img align="right" width="320" height="480" src="readme-img/cards.png">
+
 # Kontoladdning
 This app lets you easily see the charges on your [Västtrafik](http://www.vasttrafik.se) card(s).
 
