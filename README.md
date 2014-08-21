@@ -15,7 +15,7 @@ This was my first ever Ionic app and it was also a timeboxed hack, so it's quite
 If you want to contribute or just try it out:
 
 ```bash
-$ git clone https://github.com/krawaller/FIXME.git
+$ git clone https://github.com/krawaller/kontoladdning.git
 $ npm install -g ionic    # might need `sudo` depending on your node installation.
 $ open -a Google\ Chrome --args --disable-web-security # start Chrome with web-security disabled to allow cross-origin requests, just as Cordova does.
 $ ionic serve    # to start the app in your web browser.
