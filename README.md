@@ -15,7 +15,8 @@ If you want to contribute or just try it out:
 ```bash
 $ git clone https://github.com/krawaller/FIXME.git
 $ npm install -g ionic    # might need `sudo` depending on your node installation.
-$ ionic serve    # to start the app in your web browser
+$ open -a Google\ Chrome --args --disable-web-security # start Chrome with web-security disabled to allow cross-origin requests, just as Cordova does.
+$ ionic serve    # to start the app in your web browser.
 $ ionic emulate    # to run it in your simulator
 $ ionic run    # to run it on your device
 ```
