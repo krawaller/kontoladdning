@@ -1,8 +1,7 @@
-<img align="right" width="320" height="480" src="readme-img/cards.png">
-
 # Kontoladdning
 This app lets you easily see the charges on your [Västtrafik](http://www.vasttrafik.se) card(s).
 
+<img width="320" height="480" src="readme-img/cards.png">
 
 ## Development
 It's a hybrid app written in javascript with the [Ionic Framework](http://ionicframework.com/) and wrapped with [Cordova](http://cordova.apache.org/).
